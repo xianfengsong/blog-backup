@@ -28,7 +28,7 @@ tags: [mongodb,springboot]
     ]
 }
 ```
-###更新用户订单接口
+### 更新用户订单接口
 **接口描述：**首先根据userId查找到用户，如果订单_id已存在则替换，否则插入新订单,如果用户不存在则插入新文档；
 
 我们习惯直接用新数据替换整个文档的内容，不过当用户订单很多时就需要订单数组做局部更新（减少发送数据的大小，
@@ -164,7 +164,7 @@ db.user.find({userId:"u1"},{orderList:{$slice:[20,10]}}).pretty()
 
 这里的测试数据只能说明在指定数据量下接口的表现，随着数据量变化接口表现也不同。
 `关于jmh输出，以updateByPush为例，说明99.9%的请求耗时分布在50.013-6.460到50.013+6.460之间，cnt表示执行次数`
-####更新接口测试
+#### 更新接口测试
 测试结果表明，在这个实例中通过push/pull更新（不排序）比替换整个文档更新耗时减少25ms（平均值），如果更新时排序则和替换文档耗时相近。
 
 通过push/pull更新(push时排序)
@@ -205,7 +205,7 @@ Benchmark                     Mode  Cnt   Score    Error  Units
 JmhBenchmark.updateByReplace  avgt   10  45.985 ± 17.885  ms/op
 ```
 
-####查询接口测试
+#### 查询接口测试
 分别测试了slice查询，和聚合查询排序，聚合查询不排序三种。其中slice查询不代表实际的耗时，因为它不能实现按时间查询的功能。对于聚合查询，如果更新时排序则不需要再次排序。
 
 slice查询分页(不能设置分页查询条件，不能排序)
@@ -246,27 +246,32 @@ JmhBenchmark.findByAggregation  avgt   10  15.609 ± 0.795  ms/op
 
 >来自mongo权威指南的描述：管道如果不是直接从原先的集合中使用数据，那就无法在筛选和排序中使用索引。
 
-####对父文档创建索引
-```db.user.createIndex({userId:1},{unique:true})```
+#### 对父文档创建索引
+```
+db.user.createIndex({userId:1},{unique:true})
+```
+
 创建索引会加速对用户的查询，但是也会增加写数据时的操作；在测试中添加索引后查询时间略有减少，
 更新操作耗时也减少了(因为没有更新被索引字段)。
 
 加索引后聚合查询时间(执行sort)，pull/push时间（不sort)和通过替换更新的时间：
+
 
 ```
 Benchmark                       Mode  Cnt   Score   Error  Units
 JmhBenchmark.findByAggregation  avgt   10  12.829 ± 0.592  ms/op
 JmhBenchmark.updateByPush       avgt   10  17.962 ± 4.572  ms/op
 JmhBenchmark.updateByReplace    avgt   10  41.691 ± 2.140  ms/op
-
 ```
 
-####对子文档创建索引
+#### 对子文档创建索引
 去掉父文档上的索引，在嵌套的文档上创建一个createTime字段的索引
+
 ```
 db.user.createIndex({"orderList.createTime":1})
 db.user.getIndexes()
 ```
+
 再执行测试结果如下：
 ```
 Benchmark                       Mode  Cnt    Score     Error  Units
