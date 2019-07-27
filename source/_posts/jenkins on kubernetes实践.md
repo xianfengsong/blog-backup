@@ -298,17 +298,17 @@ k8s仍然尝试在node2分配节点（为什么其他节点不行），结果POD
 
 
   [1]: http://docs.kubernetes.org.cn/227.html
-  [2]: http://7xl4v5.com1.z0.glb.clouddn.com/jenkins-arch.png
-  [3]: http://7xl4v5.com1.z0.glb.clouddn.com/kongzhimianban.png
+  [2]: /images/jenkins/jenkins-arch.png
+  [3]: /images/jenkins/kongzhimianban.png
   [4]: http://www.ruanyifeng.com/blog/2016/07/yaml.html
   [5]: https://kubernetes.io/docs/concepts/storage/storage-classes/
-  [6]: http://7xl4v5.com1.z0.glb.clouddn.com/pvlife.png
-  [7]: http://7xl4v5.com1.z0.glb.clouddn.com/success.png
-  [8]: http://7xl4v5.com1.z0.glb.clouddn.com/config1.png
-  [9]: http://7xl4v5.com1.z0.glb.clouddn.com/config.png
+  [6]: /images/jenkins/pvlife.png
+  [7]: /images/jenkins/success.png
+  [8]: /images/jenkins/config1.png
+  [9]: /images/jenkins/config.png
   [10]: https://yq.aliyun.com/articles/224376
-  [11]: http://7xl4v5.com1.z0.glb.clouddn.com/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-12-08T08-06-23.616Z.png
-  [12]: http://7xl4v5.com1.z0.glb.clouddn.com/jobs.png
-  [13]: http://7xl4v5.com1.z0.glb.clouddn.com/pods1.png
-  [14]: http://7xl4v5.com1.z0.glb.clouddn.com/result2.png
+  [11]: /images/jenkins/container.png
+  [12]: /images/jenkins/jobs.png
+  [13]: /images/jenkins/pods1.png
+  [14]: /images/jenkins/result2.png
   [15]: http://dockone.io/article/2885

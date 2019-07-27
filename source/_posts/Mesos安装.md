@@ -88,4 +88,4 @@ XX exited event for master XX
 ![启动成功][1]
 
 
-  [1]: http://7xl4v5.com1.z0.glb.clouddn.com/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2017-11-20T03-34-36.517Z.png
+  [1]: /images/mesos.png

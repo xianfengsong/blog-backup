@@ -220,12 +220,12 @@ sentinel消息各种 + - 标识的含义:
 [^sentinelSendPeriodicCommands]:https://github.com/antirez/redis/blob/3.0/src/sentinel.c sentinelSendPeriodicCommands()
 
 
-  [1]: http://7xl4v5.com1.z0.glb.clouddn.com/sentinel.png
-  [2]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/s1.png
-  [3]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/s2.png
-  [4]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/s3.png
+  [1]: /images/redis/sentinel.png
+  [2]: /images/redis/s1.png
+  [3]: /images/redis/s2.png
+  [4]: /images/redis/s3.png
   [5]: http://www.infoq.com/cn/articles/raft-paper
-  [6]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/s4.png
-  [7]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/s5.png
+  [6]: /images/redis/s4.png
+  [7]: /images/redis/s5.png
   [8]: http://doc.redisfans.com/topic/sentinel.html#tilt
-  [9]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/sentinel/state.png
+  [9]: /images/redis/state.png

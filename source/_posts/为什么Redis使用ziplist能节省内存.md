@@ -429,8 +429,8 @@ curlen表示当前ziplist的占用字节数,curlen初始值11，保存"fieldkey"
 
 
   [1]: https://github.com/antirez/redis/blob/4082c38a60eedd524c78ef48c1b241105f4ddc50/src/debug.c#L337-L343
-  [2]: http://7xl4v5.com1.z0.glb.clouddn.com/ht.png
-  [3]: http://7xl4v5.com1.z0.glb.clouddn.com/ziplist.png
+  [2]: /images/redis/ht.png
+  [3]: /images/redis/ziplist.png
   [4]: http://blog.csdn.net/xiejingfa/article/details/51072326
   [5]: http://blog.csdn.net/Rongbo_J/article/details/45288223
   [6]: http://www.duokan.com/book/53962

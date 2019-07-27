@@ -170,4 +170,4 @@ service nscd restart;
 [a] <span id = "1">http://biancheng.dnbcw.info/shell/242647.html</span>
 [b] <span id = "2">http://blog.csdn.net/chenchong08/article/details/7833242</span>
 
-  [1]: http://7xl4v5.com1.z0.glb.clouddn.com/example.jpg
+  [1]: /images/example.jpg

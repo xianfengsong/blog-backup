@@ -70,9 +70,9 @@ slave1:ip=127.0.0.1,port=6380,state=online,offset=4518,lag=1
 [^code]: 当配置设置同步方式为Disk-backed时才会把RDB文件写入磁盘，Diskless模式会直接把RDB文件写到slave的socket
 
 
-  [1]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/conn1.png
-  [2]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/FULLSYNC.png
-  [3]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/prpogate2.png
-  [4]: http://7xl4v5.com1.z0.glb.clouddn.com/%E7%81%AB%E7%8B%90%E6%88%AA%E5%9B%BE_2018-01-13T07-02-09.810Z.png
-  [5]: http://7xl4v5.com1.z0.glb.clouddn.com/redis/ping.png
+  [1]: /images/redis/conn1.png
+  [2]: /images/redis/FULLSYNC.png
+  [3]: /images/redis/prpogate2.png
+  [4]: /images/redis/incssync.png
+  [5]: /images/redis/ping.png
   [6]: https://github.com/antirez/redis/issues/4102

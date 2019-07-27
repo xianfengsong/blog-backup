@@ -20,7 +20,7 @@ tags:
 带着这三个问题，下面我们一起看一下commons-pool的代码,
 它主要提供这个几种类型的对象池：
 <!--more-->
-![类图][1]
+![](/images/commonspool.gif)
 从左至右看，SoftReferenceObjectPool是不用指定容量的对象池，ProxiedObject是使用代理模式来创建对象池的对象，在这篇文章主要介绍GenericObjectPool的实现。
 
 ## 封装对象
@@ -440,7 +440,7 @@ public class DefaultEvictionPolicy<T> implements EvictionPolicy<T> {
 ```
 通过阅读GenericObjectPool的部分代码，可以看出来并没有在每个获取&退还对象的方法都做同步控制，线程安全主要是由LinkedBlockingDeque，ConcurrentHashMap这两个并发集合保证的，因此开发者在编写非线程安全方法时也使用了局部变量复制可能被修改的值，多次检查对象状态之类的方法保证并发条件下程序正常的执行（没全部加锁能够提升性能，不过也会有这样的麻烦）。
 总结一下连接池中对象的声明周期大概如下图：
-![流程图][2]
+![](/images/commonspoolflow.png)
 蓝色线是evictor执行时对象状态的变化，红线是abandon执行的过程，绿色线是正常使用中对象的变化。
 
 
