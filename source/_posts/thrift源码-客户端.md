@@ -1,8 +1,8 @@
----
-title: thrift源码系列1--源码结构和客户端介绍
+title: thrift源码（一）源码结构和客户端介绍
 date: 2019-05-22 23:55:19
 categories: thrift源码
 tags: [thrift,rpc框架]
+
 ---
 
 ## thrift架构图
@@ -11,6 +11,7 @@ tags: [thrift,rpc框架]
 ![整体视图][1]
 
 如图所示，作为一个通信框架，thrift架构上也分了不同的层，和tcp/ip的分层逻辑类似，最上层是我们的业务逻辑层，这里是我们编写的HelloService接口的实现类。
+
 <!--more-->
 
 第二层是thrift生成的HelloService.Client(或者AsyncClient)和HelloService.Processor类，分别给客户端和服务端使用，对开发者屏蔽了如何发送/处理请求，返回结果，异常检查等通信细节。
