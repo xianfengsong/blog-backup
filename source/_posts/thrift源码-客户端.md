@@ -44,17 +44,17 @@ TProtocal由TTransport组成，几乎被图中所有类依赖。
 ```java
 TTransport transport=new TSocket("localhost",7911);
                 transport.open();
-                TProtocol protocol=new TBinaryProtocol(transport);
-                HelloService.Client client=new HelloService.Client(protocol);
-                client.helloVoid();
-                transport.close();
+TProtocol protocol=new TBinaryProtocol(transport);
+HelloService.Client client=new HelloService.Client(protocol);
+client.helloVoid();
+transport.close();
 ```
-#### 创建socket连接(TTransport)，选择协议(TProtocol)
+#### 1.创建socket连接(TTransport)，选择协议(TProtocol)
 
 TSocket是TIOStreamTransport的子类，TIOStreamTransport封装了输入、输出流的处理，TScocket封装了一个Socket对象。
 TBinaryProtocol是TProtocol的子类，定义了基于二进制的通信协议
 
-#### 初始化Client,调用helloVoid函数
+#### 2.初始化Client,调用helloVoid函数
 
 helloVoid内部执行发送请求和接收响应两步操作：
 ```java
@@ -64,7 +64,7 @@ helloVoid内部执行发送请求和接收响应两步操作：
       recv_helloVoid();
     }
 ```
-#### 序列化请求并发送
+#### 3.序列化请求并发送
 
 客户端发送请求时必然要告知服务端本次请求的方法名，参数，还有调用序号，版本号等信息，这些都要通过TProtocol序列化，协议相关细节后面介绍。
 序列化完成后，TBinaryProtocol把这些内容通过TTransport写入到输出流，通过网络发送到服务端。
@@ -101,7 +101,7 @@ public static class helloVoid_args implements TBase<helloVoid_args, helloVoid_ar
 ```
 #### 接收响应并反序列化结果
 
-当服务端返回数据后，`recv_helloVoid`函数处理服务端返回的数据，反序列化得到`helloVoid_result`，并对异常做处理。注意对seqid的检查，thrift在这里处理服务端响应乱序的情况(后接收的先返回)，处理方式是直接抛出异常。
+当服务端返回数据后，`recv_helloVoid`函数处理服务端返回的数据，反序列化得到`helloVoid_result`，并对异常做处理。**注意对seqid的检查**，thrift在这里处理服务端响应乱序的情况(后接收的先返回)，处理方式是直接抛出异常。
 ```java
 public void recv_helloVoid() throws TException
     {
