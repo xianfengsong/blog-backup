@@ -13,7 +13,7 @@ thrift的非阻塞服务端，采用还是类似Reactor的IO复用模型
 客户端的请求会被公平的处理(没有优先级，看哪个请求先触发selector)，使用TNonblockingServer时必须使用TFramedTransport，不然无法确定数据包何时读取完成(数据边界)。
 <!--more-->
 
-![reactor single][5]
+{% asset_img reactor-single.png image %}
 
 #### SelectThread
 
