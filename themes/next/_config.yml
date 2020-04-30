@@ -77,25 +77,25 @@ footer:
   # -------------------------------------------------------------
   powered:
     # Hexo link (Powered by Hexo).
-    enable: true
+    enable: false
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # http://www.miitbeian.gov.cn/
   beian:
-    enable: false
-    icp: 
+    enable: true
+    icp: 京ICP备19018367号
 
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
+  custom_text:   <a target="_blank" rel="external nofollow" href="https://cloud.tencent.com/product/tcb?from=12334"><b>Powered By 云开发</b></a><img src="/images/tencent.png" href="https://cloud.tencent.com/product/tcb?from=12334" style="max-width:10%;margin:0;">
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -164,7 +164,7 @@ site_state: true
 social:
   GitHub: https://github.com/xianfengsong || github
   #E-Mail: mailto:yourname@gmail.com || envelope
-  Weibo: https://weibo.com/xianfengsong || weibo
+  #Weibo: https://weibo.com/xianfengsong || weibo
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
