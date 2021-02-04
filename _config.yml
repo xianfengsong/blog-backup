@@ -81,7 +81,8 @@ deploy:
 - type: git
   repo: git@github.com:xianfengsong/xianfengsong.github.io.git
   branch: master 
-- type: git
-  repo: git@140.143.79.55:/home/git/repo/blog.git
-  branch: master
-  message: 
+# 云主机已下线，使用腾讯云的静态网站托管代替  
+# - type: git
+#   repo: git@140.143.79.55:/home/git/repo/blog.git
+#   branch: master
+#   message: 
