@@ -95,7 +95,7 @@ footer:
 
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  custom_text:   <a target="_blank" rel="external nofollow" href="https://cloud.tencent.com/product/tcb?from=12334"><b>Powered By 云开发</b></a><img src="/images/tencent.png" href="https://cloud.tencent.com/product/tcb?from=12334" style="max-width:10%;margin:0;">
+  custom_text:   <a target="_blank" rel="external nofollow" href="https://cloud.tencent.com/product/tcb?from=12334"><b>Powered By 云开发</b></a>
 
 # ---------------------------------------------------------------
 # SEO Settings
